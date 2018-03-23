@@ -7,12 +7,9 @@ import org.springframework.web.bind.annotation.RestController
 class RestController {
 
     @GetMapping("api/hello")
-    fun hello(): RestResponse<String> {
-        return RestResponse.of("Hello World!")
-    }
+    fun hello(): RestResponse<String> = RestResponse.of("Hello World!")
 
     @GetMapping("api/ok")
-    fun ok(): RestResponse<Any> {
-        return RestResponse.OK
-    }
+    fun ok(): RestResponse<Any> = RestResponse.OK
+
 }

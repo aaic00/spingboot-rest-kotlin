@@ -6,8 +6,7 @@ data class RestResponse<out T>(val code: String = "000", val desc: String = "", 
         val OK: RestResponse<Any> = RestResponse()
 
         @JvmStatic
-        fun <T> of(data: T): RestResponse<T> {
-            return RestResponse(data = data)
-        }
+        fun <T> of(data: T): RestResponse<T> = RestResponse(data = data)
+
     }
 }
